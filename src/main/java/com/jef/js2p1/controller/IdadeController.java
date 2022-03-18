@@ -20,9 +20,9 @@ public class IdadeController {
     }
 
     @GetMapping("/{dia}/{mes}/{ano}")
-    public ResponseEntity<Long> calculaIdade(@PathVariable("dia") String dia,
-                                                @PathVariable("mes") String mes,
-                                                @PathVariable("ano") String ano) {
+    public ResponseEntity<Long> calculaIdade(@PathVariable("dia") Integer dia,
+                                                @PathVariable("mes") Integer mes,
+                                                @PathVariable("ano") Integer ano) {
 
         return new ResponseEntity<>(idadeService.calculaIdade(dia, mes, ano), HttpStatus.OK);
     }
